@@ -1,0 +1,68 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #87CEEB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #a9d5de;
+}
+
+.game-element {
+    position: absolute;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+#glider {
+    background-color: #4682b4;
+    width: 60px;
+    height: 40px;
+    bottom: 20px;
+    left: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#obstacle {
+    background-color: #2e8b57;
+    width: 80px;
+    height: 60px;
+    top: -60px;
+    left: 100%;
+}
+
+#scoreboard {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@keyframes moveObstacle {
+    from { top: -60px; }
+    to { top: 100vh; }
+}
+
+@media (max-width: 600px) {
+    #glider {
+        width: 40px;
+        height: 30px;
+    }
+
+    #obstacle {
+        width: 60px;
+        height: 50px;
+    }
+}
